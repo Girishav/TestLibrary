@@ -4,4 +4,4 @@ import ExampleComponent from "./src/ExampleComponent"
 
 const { RNTestLibrary } = NativeModules;
 
-export default {RNTestLibrary,ExampleComponent};
+export {ExampleComponent}
