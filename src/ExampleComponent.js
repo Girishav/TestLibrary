@@ -23,4 +23,4 @@ class ExampleComponent {
   }
 } 
 
-export const ExampleComp = new ExampleComponent();
+export default new ExampleComponent();
