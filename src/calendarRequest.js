@@ -21,12 +21,7 @@ export default class calendarRequest {
           console.log("Status code : " + response.status);
           var responseData = JSON.stringify(response.data)
           console.log("data: " + responseData);
-          // if (
-          //   responseStatus.status == HttpStatus.SC_OK ||
-          //   responseStatus.status == HttpStatus.SC_CREATED
-          // ) {
             success(responseData);
-      //    }
         })
         .catch((error) => {
           console.log('Got Error', error);
