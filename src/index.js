@@ -1,4 +1,5 @@
 
 import ExampleComponent from "./ExampleComponent"
 import MobileComponent from "./MobileComponent"
-export {ExampleComponent,MobileComponent}
+import ReactComponent from "./ReactComponent"
+export {ExampleComponent,MobileComponent,ReactComponent}
