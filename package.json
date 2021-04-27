@@ -5,9 +5,6 @@
   "author": "Girishav",
   "license": "MIT",
   "repository": "https://github.com/Girishav/TestLibrary.git",
-  "main": "dist/index.js",
-  "module": "dist/index.modern.js",
-  "source": "src/index.js",
   "engines": {
     "node": ">=10"
   },
