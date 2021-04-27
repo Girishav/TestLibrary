@@ -1,8 +1,4 @@
 
-import { NativeModules } from 'react-native';
-import ExampleComponent from "./src/ExampleComponent"
-import calendarComponent from "./src/calenderComponent"
+import ExampleComponent from "./src/Examplecomponent"
 
-const { RNTestLibrary } = NativeModules;
-
-export {ExampleComponent,calendarComponent}
+export {ExampleComponent}
