@@ -4,6 +4,9 @@
   "description": "My test library",
   "author": "Girishav",
   "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
   "repository": "https://github.com/Girishav/TestLibrary.git",
   "engines": {
     "node": ">=10"
