@@ -12,10 +12,10 @@ class ExampleComponent {
       return new Promise((success, failure) => {
         self.calendar = new calendarRequest();
         self.calendar.getCalendarList(name).then(response => {
-          console.log("girish sdk data",response)
+          console.log("calendar list data ::",response)
           success(response);
         }).catch(error => {
-          console.log("config sdk failed ::", error);
+          console.log("calendar list call failed ::", error);
           failure(error);
         });
       });

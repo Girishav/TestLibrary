@@ -1,4 +1,4 @@
 
-import ExampleComponent from "./src/Examplecomponent"
+import ExampleComponent from "./src/ExampleComponent"
 
 export {ExampleComponent}

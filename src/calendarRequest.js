@@ -21,12 +21,7 @@ export default class calendarRequest {
           console.log("Status code : " + response.status);
           var responseData = JSON.stringify(response.data)
           console.log("data: " + responseData);
-          // if (
-          //   responseStatus.status == HttpStatus.SC_OK ||
-          //   responseStatus.status == HttpStatus.SC_CREATED
-          // ) {
             success(responseData);
-      //    }
         })
         .catch((error) => {
           console.log('Got Error', error);
@@ -34,10 +29,10 @@ export default class calendarRequest {
             responseStatus.status = error.response.status;
             if(error.response.data.error)
             responseStatus.message =
-              "Failed to obtain mucid :" + error.response.data.error.message;
+              "Failed to obtain calendar list :" + error.response.data.error.message;
             else
             responseStatus.message =
-            "Failed to obtain mucid ";
+            "Failed to obtain calendar list ";
             return failure(responseStatus);
           } else {
             console.log("Got Error " + error);
