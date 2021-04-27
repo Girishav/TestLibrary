@@ -1,3 +1,4 @@
 
 import ExampleComponent from "./ExampleComponent"
-export {ExampleComponent}
+import MobileComponent from "./MobileComponent"
+export {ExampleComponent,MobileComponent}
