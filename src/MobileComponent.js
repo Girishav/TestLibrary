@@ -60,3 +60,54 @@ export default class MobileComponent extends Component {
         );
     }
 } 
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        backgroundColor: '#303030',
+    },
+    headingStyle: {
+        fontSize: 34,
+        marginTop: '25%',
+        color: '#217DAF',
+        justifyContent: 'center',
+    },
+    subheadingStyle: {
+        fontSize: 16,
+        marginTop: 30,
+        marginBottom: 10,
+        color: '#b2b2b2',
+        justifyContent: 'center',
+    },
+    copyrighttext_style: {
+        bottom: 0,
+        fontSize: 12,
+        marginBottom: 20,
+        color: '#DAA520',
+        position: 'absolute',
+    },
+
+    button: {
+        height: 50,
+        width: 250,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 10,
+        borderRadius: 5,
+        borderWidth: 2,
+        borderColor: '#319ed9',
+        backgroundColor: '#319ed9',
+        fontWeight: 'bold',
+        fontSize: 15,
+        color: '#ffffff',
+        textAlign: 'center',
+    },
+
+    signOutText:{
+        marginTop: '5%',
+        color: '#1565c0',
+        textAlign: 'center',
+    }
+
+});
