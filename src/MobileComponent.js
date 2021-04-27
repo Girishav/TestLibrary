@@ -55,7 +55,6 @@ export default class MobileComponent extends Component {
                     Sign Out: {this.state.userId}
                 </Text>
                 <Text style={styles.copyrighttext_style}> Copyright(c) 2018 Comcast. All rights reserved. </Text>
-                <FlashMessage position="top"/>
             </View>
         );
     }
