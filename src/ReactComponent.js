@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styles from './styles.module.css'
+import PropTypes from 'prop-types';
 
 export default class ReactComponent extends Component {
     static navigationOptions = {
