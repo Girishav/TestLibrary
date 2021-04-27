@@ -5,10 +5,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
-    library: {
-           name: 'TestLibrary',
-           type: 'umd',
-          },
+    library: "$",
+    libraryTarget: "umd",
+    libraryExport: 'default',
+    globalObject: 'this',
   },
   module: {
     rules: [
@@ -18,6 +18,14 @@ module.exports = {
         use: "babel-loader",
       },
     ],
+  },
+  resolve: {
+    ...defaults.resolve,
+    alias: {
+       ...defaults.resolve.alias,
+      react: path.join(__dirname, 'node_modules/react'),
+      'react-native': path.join(__dirname, 'node_modules/react-native'),
+    }
   },
   mode: "development"
 }

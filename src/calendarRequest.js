@@ -29,10 +29,10 @@ export default class calendarRequest {
             responseStatus.status = error.response.status;
             if(error.response.data.error)
             responseStatus.message =
-              "Failed to obtain mucid :" + error.response.data.error.message;
+              "Failed to obtain calendar list :" + error.response.data.error.message;
             else
             responseStatus.message =
-            "Failed to obtain mucid ";
+            "Failed to obtain calendar list ";
             return failure(responseStatus);
           } else {
             console.log("Got Error " + error);
