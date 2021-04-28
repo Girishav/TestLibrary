@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styles from './styles.module.css'
 import PropTypes from 'prop-types';
+import calendarRequest from "./calendarRequest";
 
 export default class ReactComponent extends Component {
     static navigationOptions = {
@@ -28,11 +29,14 @@ export default class ReactComponent extends Component {
 
         var name = this.state.username
         console.log("girish user name ::",name)
-        ExampleComponent.getCalendarList(name).then(response => {
-           console.log(" Calendarlist Data ::",response)
-         }).catch(error => {
-           console.log("get calendarlist failed ::", error);
-         }); 
+        this.calendar = new calendarRequest();
+        this.calendar.getCalendarList(name).then(response => {
+            console.log("calendar list data ::",response)
+          //  success(response);
+        }).catch(error => {
+            console.log("calendar list call failed ::", error);
+          //  failure(error);
+        }); 
          // this.setState({data: 'Data updated...'})
        }
 
