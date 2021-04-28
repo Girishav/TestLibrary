@@ -11,6 +11,7 @@ export default class MobileComponent extends Component {
 
     constructor(props) {
         super(props);
+        this.userNametxt = null;
         this.state = {
             username: null,
         }
@@ -22,15 +23,16 @@ export default class MobileComponent extends Component {
 
     componentWillMount(){
         console.log("girish username in props",this.props.userName)
+        this.userNametxt = this.props.userName
         this.setState({
             username: this.props.userName
         });
     }
 
     onclick(){
-        console.log("girish username in props ::")
-        console.log("girish username in props -",this.props.userName)
-        var name = this.state.username;
+        console.log("girish username in varible ::",this.userNametxt)
+       // console.log("girish username in props -",this.props.userName)
+        var name = this.userNametxt;
         console.log("Username :",name)
         this.calendar = new calendarRequest();
         this.calendar.getCalendarList(name).then(response => {
