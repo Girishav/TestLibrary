@@ -22,7 +22,7 @@ export default class MobileComponent extends Component {
     };
 
     componentWillMount(){
-        console.log("girish username in props",this.props.userName)
+        console.log("girish username in props ::",this.props.userName)
         this.userNametxt = this.props.userName
         this.setState({
             username: this.props.userName
@@ -52,7 +52,7 @@ export default class MobileComponent extends Component {
                 <Text style={styles.headingStyle}>555 Test</Text>
                 <Text style={styles.subheadingStyle}>Choose from one of the options below.</Text>
 
-                <RectangularButton style={styles.button} handleOnPress={this.onclick}
+                <RectangularButton style={styles.button} handleOnPress={this.onclick.bind(this)}
                                    text="CALENDER LIST"
                 />
             </View>
