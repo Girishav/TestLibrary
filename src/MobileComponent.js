@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, StatusBar, Alert} from 'react-native';
 import RectangularButton from "./RectangularButton";
+import calendarRequest from "./calendarRequest"
 import PropTypes from 'prop-types';
 
 export default class MobileComponent extends Component {
@@ -11,7 +12,7 @@ export default class MobileComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userId: null,
+            username: null,
         }
     }
 
@@ -19,8 +20,23 @@ export default class MobileComponent extends Component {
         status: PropTypes.string
     };
 
-    onclick(){
+    componentWillMount(){
+        this.setState({
+            username: this.props.status
+        });
+    }
 
+    onclick(){
+        var name = this.state.username;
+        console.log("Username :",name)
+        this.calendar = new calendarRequest();
+        this.calendar.getCalendarList(name).then(response => {
+            console.log("calendar list data ::",response)
+            success(response);
+        }).catch(error => {
+            console.log("calendar list call failed ::", error);
+            failure(error);
+        });
     }
 
     render() {
@@ -32,29 +48,8 @@ export default class MobileComponent extends Component {
                 <Text style={styles.subheadingStyle}>Choose from one of the options below.</Text>
 
                 <RectangularButton style={styles.button} handleOnPress={this.onclick}
-                                   text="EMERGENCY CALL"
+                                   text="CALENDER LIST"
                 />
-
-                <RectangularButton style={styles.button} handleOnPress={this.onclick}
-                                   text="PSTN CALL"
-                />
-                <RectangularButton style={styles.button} handleOnPress={this.onclick}
-                                   text="VIDEO CALL"
-                />
-                <RectangularButton style={styles.button} handleOnPress={this.onclick}
-                                   text="JOIN ROOM"
-                />
-                <RectangularButton style={styles.button} handleOnPress={this.onclick}
-                                   text="CAMERA CALL"
-                />
-                <RectangularButton style={styles.button} handleOnPress={this.onclick}
-                                   text="SETTINGS"
-                />
-
-                <Text onPress={()=>this.signOut()} style = {styles.signOutText}>
-                    Sign Out: {this.state.userId}
-                </Text>
-                <Text style={styles.copyrighttext_style}> Copyright(c) 2018 Comcast. All rights reserved. </Text>
             </View>
         );
     }
