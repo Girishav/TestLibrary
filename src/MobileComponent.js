@@ -17,12 +17,13 @@ export default class MobileComponent extends Component {
     }
 
     static propTypes = {
-        status: PropTypes.string
+        userName: PropTypes.string
     };
 
     componentWillMount(){
+        console.log("girish username in props",this.props.userName)
         this.setState({
-            username: this.props.status
+            username: this.props.userName
         });
     }
 
