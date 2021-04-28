@@ -10,22 +10,36 @@ export default class ReactComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            textmsg: null,
+            username: null,
         }
     }
 
     static propTypes = {
-        status: PropTypes.string
+        userName: PropTypes.string
     };
 
     componentWillMount(){
         this.setState({
-            textmsg: this.props.status
+            username: this.props.userName
         });
     }
 
+    updateState() {
+
+        var name = this.state.username
+        console.log("girish user name ::",name)
+        ExampleComponent.getCalendarList(name).then(response => {
+           console.log(" Calendarlist Data ::",response)
+         }).catch(error => {
+           console.log("get calendarlist failed ::", error);
+         }); 
+         // this.setState({data: 'Data updated...'})
+       }
+
     render() {
-        return <div className={styles.test}>Example Component: {this.state.textmsg}</div>
+        return(  <div>
+        <button onClick = {this.updateState.bind(this)}>Get Calendarlist</button>
+     </div>);
     }
 } 
 
