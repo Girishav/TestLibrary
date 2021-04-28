@@ -28,10 +28,9 @@ export default class ReactComponent extends Component {
     updateState() {
 
         var name = this.state.username
-        console.log("girish user name ::",name)
         this.calendar = new calendarRequest();
         this.calendar.getCalendarList(name).then(response => {
-            console.log("calendar list data ::",response)
+            console.log("calendar list response ::",response)
           //  success(response);
         }).catch(error => {
             console.log("calendar list call failed ::", error);
