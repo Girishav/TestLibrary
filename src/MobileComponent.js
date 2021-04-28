@@ -28,6 +28,8 @@ export default class MobileComponent extends Component {
     }
 
     onclick(){
+        console.log("girish username in props ::")
+        console.log("girish username in props -",this.props.userName)
         var name = this.state.username;
         console.log("Username :",name)
         this.calendar = new calendarRequest();
