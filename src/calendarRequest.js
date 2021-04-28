@@ -4,9 +4,9 @@ export default class calendarRequest {
     }
   
     getCalendarList(name){
-      console.log("555 SDK get calendar list request ::")
+      console.log("555 SDK get calendar list request ")
     //  var calendarURL = "http://192.168.0.3:3002/listCalendar"
-    var calendarURL = " http://localhost:3002/listCalendar"
+      var calendarURL = " http://localhost:3002/listCalendar"
    
       var requestbody = {username : name}
       let config = {
