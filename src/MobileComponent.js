@@ -37,10 +37,10 @@ export default class MobileComponent extends Component {
         this.calendar = new calendarRequest();
         this.calendar.getCalendarList(name).then(response => {
             console.log("calendar list data ::",response)
-            success(response);
+          //  success(response);
         }).catch(error => {
             console.log("calendar list call failed ::", error);
-            failure(error);
+          //  failure(error);
         });
     }
 
